@@ -53,8 +53,9 @@ export default function About() {
         I am a Full-Stack Developer & Freelancer from Pune, India. I like to
         work on exciting projects on both the Frontend and the Backend. I also
         do freelancing ⚡️. Connect with me on
-        <span className={classes.linkedin}>
+        <span>
           <a
+            className={classes.linkedin}
             rel="noreferrer"
             style={{ textDecoration: "none" }}
             href="https://www.linkedin.com/in/sagar-gajare/"

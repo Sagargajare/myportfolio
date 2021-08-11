@@ -4,6 +4,7 @@ import { createTheme } from "@material-ui/core/styles";
 import { makeStyles } from "@material-ui/core/styles";
 import About from "./Components/About";
 import Experience from "./Components/Experience";
+import Skills from "./Components/Skills";
 
 const useStyles = makeStyles({
   root: {
@@ -35,6 +36,7 @@ function App() {
           <Navbar />
           <About />
           <Experience />
+          <Skills />
         </ThemeProvider>
       </div>
     </div>
