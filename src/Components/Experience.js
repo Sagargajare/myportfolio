@@ -38,7 +38,9 @@ export default function Experience() {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <h1 className={classes.title}>Experience</h1>
+      <h1 id="experience" className={classes.title}>
+        My Experience
+      </h1>
 
       <br />
       <Cards />

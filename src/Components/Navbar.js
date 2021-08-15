@@ -13,12 +13,12 @@ import Drawer from "@material-ui/core/Drawer";
 import clsx from "clsx";
 
 import List from "@material-ui/core/List";
-import Divider from "@material-ui/core/Divider";
+
 import ListItem from "@material-ui/core/ListItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
+
 import ListItemText from "@material-ui/core/ListItemText";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
-import MailIcon from "@material-ui/icons/Mail";
+import { Link, animateScroll as scroll } from "react-scroll";
+import Hireme from "./Hireme";
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -30,6 +30,8 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 0,
     fontSize: "2em",
     fontWeight: "bold",
+    borderBottom: " 2px solid rgba(106,0,255,.94)",
+    color: "rgba(106, 0, 255, .94)",
   },
   button: {
     border: " 2px solid",
@@ -44,6 +46,10 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "row",
     padding: 0,
+  },
+  purple: {
+    borderBottom: " 2px solid rgba(106,0,255,.94)",
+    color: "rgba(106, 0, 255, .94)",
   },
 }));
 
@@ -88,7 +94,14 @@ export default function Navbar() {
           <ListItemText primary="Projects" />
         </ListItem>
         <ListItem button>
-          <ListItemText primary="Experience" />
+          <ListItemText>
+            <a href="#experience">Experience</a>
+          </ListItemText>
+        </ListItem>
+        <ListItem button>
+          <ListItemText>
+            <a href="#contact">Contact</a>
+          </ListItemText>
         </ListItem>
       </List>
     </div>
@@ -96,16 +109,16 @@ export default function Navbar() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="static" color="transparent">
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
             SagarG.
           </Typography>
-          {!matches && (
+          {/* {!matches && (
             <IconButton aria-label="delete">
               <GetAppIcon />
             </IconButton>
-          )}
+          )} */}
 
           {matches && (
             <div style={{ margin: "0 auto" }}>
@@ -113,25 +126,74 @@ export default function Navbar() {
                 style={{ display: "flex", flexDirection: "row", padding: 0 }}
               >
                 <ListItem button>
-                  <ListItemText primary="Home" />
-                </ListItem>
-                <ListItem button>
-                  <ListItemText primary="About" />
+                  <ListItemText>
+                    <Link
+                      activeClass="active"
+                      to="about"
+                      spy={true}
+                      smooth={true}
+                      offset={-70}
+                      duration={500}
+                    >
+                      About
+                    </Link>
+                  </ListItemText>
                 </ListItem>
                 <ListItem button>
                   <ListItemText primary="Projects" />
                 </ListItem>
                 <ListItem button>
-                  <ListItemText primary="Experience" />
+                  <ListItemText>
+                    <Link
+                      activeClass="active"
+                      to="experience"
+                      spy={true}
+                      smooth={true}
+                      offset={-70}
+                      duration={500}
+                    >
+                      Experience
+                    </Link>
+                  </ListItemText>
+                </ListItem>
+                <ListItem button>
+                  <ListItemText>
+                    <Link
+                      activeClass="active"
+                      to="skills"
+                      spy={true}
+                      smooth={true}
+                      offset={-70}
+                      duration={500}
+                    >
+                      Skills
+                    </Link>
+                  </ListItemText>
+                </ListItem>
+
+                <ListItem button>
+                  <ListItemText>
+                    <Link
+                      activeClass="active"
+                      to="contact"
+                      spy={true}
+                      smooth={true}
+                      offset={-70}
+                      duration={500}
+                    >
+                      Contact
+                    </Link>
+                  </ListItemText>
                 </ListItem>
               </List>
             </div>
           )}
-          {matches && (
+          {/* {matches && (
             <Button startIcon={<GetAppIcon />} className={classes.button}>
               Resume
             </Button>
-          )}
+          )} */}
+          <Hireme />
           {!matches && (
             <IconButton
               onClick={toggleDrawer(anchor, true)}

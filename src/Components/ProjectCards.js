@@ -84,8 +84,8 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   paper: {
-    height: 150,
-    width: 260,
+    height: 450,
+    width: 350,
 
     display: "flex",
     flexDirection: "column",
@@ -110,13 +110,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function SpacingGrid() {
+export default function ProjectCards() {
   const [spacing, setSpacing] = React.useState(5);
   const classes = useStyles();
-
-  const handleChange = (event) => {
-    setSpacing(Number(event.target.value));
-  };
 
   return (
     <Grid container className={classes.root} spacing={2}>

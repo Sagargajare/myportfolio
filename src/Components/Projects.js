@@ -2,7 +2,11 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Typography } from "@material-ui/core";
 import SkillCard from "./SkillCard";
+import ProjectCards from "./ProjectCards";
 const useStyles = makeStyles((theme) => ({
+  root: {
+    marginTop: "60px",
+  },
   title: {
     fontSize: "50px",
     display: "table",
@@ -27,17 +31,17 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "50px",
   },
 }));
-export default function Skills() {
+export default function Projects() {
   const classes = useStyles();
   return (
-    <div id="skills">
-      <h1 className={classes.title}>Take a look at my Skills.</h1>
+    <div id="skills" className={classes.root}>
+      <h1 className={classes.title}>These are my Projects.</h1>
       <Typography align="center" variant="p" className={classes.description}>
-        These are my skills and this contains all the technologies and
-        programming languages that I have learnt until now. I am constantly
-        learning, therefore I may update this section more often.
+        These are some of the Fictional projects that I worked on. I have
+        created some projects that help me understand more of the technology
+        that I use.
       </Typography>
-      <SkillCard />
+      <ProjectCards />
     </div>
   );
 }

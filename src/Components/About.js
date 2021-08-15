@@ -44,9 +44,9 @@ const useStyles = makeStyles((theme) => ({
 export default function About() {
   const classes = useStyles();
   return (
-    <div className={classes.root}>
+    <div id="home" className={classes.root}>
       <h2>
-        Hi, I am <span className={classes.purple}>Sagar </span>👋
+        Hi, I am <span className={classes.purple}>Sagar Gajare </span>👋
       </h2>
       <h2 className={classes.mytitle}>React-Django Full Stack Developer</h2>
       <p className={classes.bio}>
