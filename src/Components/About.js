@@ -1,5 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
+import { Button } from "@material-ui/core";
+import { Link, animateScroll as scroll } from "react-scroll";
 const useStyles = makeStyles((theme) => ({
   root: {
     padding: "50px 0",
@@ -39,6 +41,14 @@ const useStyles = makeStyles((theme) => ({
     color: "#0A66C2",
     borderBottom: "1px solid #0A66C2",
   },
+  ctcButtons: {
+    display: "flex",
+    flexDirection: "row",
+    marginTop: "50px",
+    "& > *": {
+      margin: "10px",
+    },
+  },
 }));
 
 export default function About() {
@@ -67,6 +77,29 @@ export default function About() {
         </span>
         🙌.
       </p>
+      <b />
+      <div className={classes.ctcButtons}>
+        <Button
+          href="https://drive.google.com/file/d/1QbOrh6FwyvRCEho5HptRzz7VOkkSPPnd/view?ths=true"
+          variant="contained"
+          color="primary"
+        >
+          My Resume
+        </Button>
+
+        <Button variant="outlined" color="primary">
+          <Link
+            activeClass="active"
+            to="contact"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+          >
+            Contact Me
+          </Link>
+        </Button>
+      </div>
     </div>
   );
 }
