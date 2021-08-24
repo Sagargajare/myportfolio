@@ -45,9 +45,9 @@ function App() {
 
           <Experience />
           <AboutMe />
+          <Projects />
           <Skills />
 
-          {/* <Projects /> */}
           <ContactForm />
           <Footer />
         </ThemeProvider>

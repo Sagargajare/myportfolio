@@ -1,11 +1,14 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Typography } from "@material-ui/core";
+import { Button, Typography } from "@material-ui/core";
 import SkillCard from "./SkillCard";
 import ProjectCards from "./ProjectCards";
+
 const useStyles = makeStyles((theme) => ({
   root: {
     marginTop: "60px",
+    marginBottom: "60px",
+    textAlign: "center",
   },
   title: {
     fontSize: "50px",
@@ -30,18 +33,28 @@ const useStyles = makeStyles((theme) => ({
     // fontWeight: "bold",
     marginBottom: "50px",
   },
+  morebutton: {
+    margin: "20px auto",
+  },
 }));
 export default function Projects() {
   const classes = useStyles();
   return (
     <div id="skills" className={classes.root}>
-      <h1 className={classes.title}>These are my Projects.</h1>
+      <h1 className={classes.title}>These are My Freelancing Projects.</h1>
       <Typography align="center" variant="p" className={classes.description}>
-        These are some of the Fictional projects that I worked on. I have
-        created some projects that help me understand more of the technology
-        that I use.
+        These are some of my freelancing projects
       </Typography>
       <ProjectCards />
+      <br />
+      <Button
+        href="https://www.freelancer.in/u/sggajare"
+        color="primary"
+        variant="contained"
+        className={classes.morebutton}
+      >
+        See All
+      </Button>
     </div>
   );
 }
