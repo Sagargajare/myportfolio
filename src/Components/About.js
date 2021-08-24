@@ -80,7 +80,7 @@ export default function About() {
       <b />
       <div className={classes.ctcButtons}>
         <Button
-          href="https://github.com/Sagargajare/myportfolio/raw/main/src/Resume/Sagar's%20Resume-Software%20Developer.pdf"
+          href="https://drive.google.com/file/d/1QbOrh6FwyvRCEho5HptRzz7VOkkSPPnd/view?ths=true"
           variant="contained"
           color="primary"
         >
