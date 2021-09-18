@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
   },
   paper: {
-    backgroundColor: "#ffffff",
+    backgroundColor: theme.palette.background.paper,
     height: 350,
     width: 450,
     borderRadius: "8px",

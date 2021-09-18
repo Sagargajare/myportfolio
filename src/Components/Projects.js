@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
 export default function Projects() {
   const classes = useStyles();
   return (
-    <div id="skills" className={classes.root}>
+    <div id="projects" className={classes.root}>
       <h1 className={classes.title}>These are My Freelancing Projects.</h1>
       <Typography align="center" variant="p" className={classes.description}>
         These are some of my freelancing projects

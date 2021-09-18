@@ -9,9 +9,10 @@ import MenuIcon from "@material-ui/icons/Menu";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import GetAppIcon from "@material-ui/icons/GetApp";
 import Drawer from "@material-ui/core/Drawer";
-
+import { Switch } from "@material-ui/core";
 import clsx from "clsx";
-
+import Brightness2Icon from "@material-ui/icons/Brightness2";
+import WbSunnyIcon from "@material-ui/icons/WbSunny";
 import List from "@material-ui/core/List";
 
 import ListItem from "@material-ui/core/ListItem";
@@ -20,6 +21,13 @@ import ListItemText from "@material-ui/core/ListItemText";
 import { Link, animateScroll as scroll } from "react-scroll";
 import Hireme from "./Hireme";
 const useStyles = makeStyles((theme) => ({
+  list: {
+    width: "100vw",
+    textAlignLast: "center",
+  },
+  navbar: {
+    textAlignLast: "center",
+  },
   root: {
     flexGrow: 1,
   },
@@ -51,9 +59,12 @@ const useStyles = makeStyles((theme) => ({
     borderBottom: " 2px solid rgba(106,0,255,.94)",
     color: "rgba(106, 0, 255, .94)",
   },
+  toolBar: {
+    backgroundColor: "rgba(255, 255, 0, 0.02)",
+  },
 }));
 
-export default function Navbar() {
+export default function Navbar({ darkMode,setDarkMode}) {
   const classes = useStyles();
   const matches = useMediaQuery("(min-width:600px)");
   const anchor = "right";
@@ -83,42 +94,88 @@ export default function Navbar() {
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-      <List>
-        <ListItem button>
-          <ListItemText primary="Home" />
-        </ListItem>
-        <ListItem button>
-          <ListItemText primary="About" />
-        </ListItem>
-        <ListItem button>
-          <ListItemText primary="Projects" />
-        </ListItem>
-        <ListItem button>
-          <ListItemText>
-            <a href="#experience">Experience</a>
-          </ListItemText>
-        </ListItem>
-        <ListItem button>
-          <ListItemText>
-            <a href="#contact">Contact</a>
-          </ListItemText>
-        </ListItem>
-      </List>
-    </div>
+      
+        <List>
+          <ListItem button>
+            <ListItemText>
+              <Link
+                activeClass="active"
+                to="about"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                About
+              </Link>
+            </ListItemText>
+          </ListItem>
+          <ListItem button>
+            <ListItemText primary="Projects" />
+          </ListItem>
+          <ListItem button>
+            <ListItemText>
+              <Link
+                activeClass="active"
+                to="experience"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                Experience
+              </Link>
+            </ListItemText>
+          </ListItem>
+          <ListItem button>
+            <ListItemText>
+              <Link
+                activeClass="active"
+                to="skills"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                Skills
+              </Link>
+            </ListItemText>
+          </ListItem>
+
+          <ListItem button>
+            <ListItemText>
+              <Link
+                activeClass="active"
+                to="contact"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                Contact
+              </Link>
+            </ListItemText>
+          </ListItem>
+          <ListItem>
+            <ListItemText>
+              <IconButton onClick={() => setDarkMode(!darkMode)}>
+                {darkMode ? <Brightness2Icon /> : <WbSunnyIcon />}
+              </IconButton>
+            </ListItemText>
+          </ListItem>
+        </List>
+      </div>
+    
   );
 
   return (
     <div className={classes.root}>
-      <AppBar position="static" color="transparent">
-        <Toolbar>
+      <AppBar position="fixed" color="transparent">
+        <Toolbar className={ classes.toolBar} >
           <Typography variant="h6" className={classes.title}>
             SagarG.
           </Typography>
-          {/* {!matches && (
-            <IconButton aria-label="delete">
-              <GetAppIcon />
-            </IconButton>
-          )} */}
+          
 
           {matches && (
             <div style={{ margin: "0 auto" }}>
@@ -185,14 +242,18 @@ export default function Navbar() {
                     </Link>
                   </ListItemText>
                 </ListItem>
+                <ListItem >
+                  <IconButton
+                    onClick={() => setDarkMode(!darkMode)}
+                  >
+                    { darkMode? <Brightness2Icon/>: <WbSunnyIcon/>}
+                  </IconButton>
+                 
+                </ListItem>
               </List>
             </div>
           )}
-          {/* {matches && (
-            <Button startIcon={<GetAppIcon />} className={classes.button}>
-              Resume
-            </Button>
-          )} */}
+         
           <Hireme />
           {!matches && (
             <IconButton

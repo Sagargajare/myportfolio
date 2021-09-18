@@ -12,11 +12,7 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: "80px",
     fontFamily: "Inter",
   },
-  paper: {
-    padding: theme.spacing(2),
-    textAlign: "center",
-    color: theme.palette.text.secondary,
-  },
+ 
   socialMediaHeader: {
     textAlign: "center",
     fontWeight: 600,
@@ -30,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
     margin: "5px",
     marginBottom: "15px",
     textDecoration: "none",
-    color: "#4a557e",
+  
     fontWeight: "600",
     fontSize: "16px",
     letterSpacing: "-.4px",
@@ -39,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
       fontFamily: "Inter",
       fontWeight: "600",
       fontSize: "16px",
-      color: " #4a557e",
+    
       textDecoration: "none",
     },
   },
@@ -88,12 +84,7 @@ export default function Footer() {
             </li>
           </ul>
         </Grid>
-        {/* <Grid item xs={6} sm={3}>
-          
-        </Grid> */}
-        {/* <Grid item xs={6} sm={3}>
-          <Paper className={classes.paper}>xs=6 sm=3</Paper>
-        </Grid> */}
+       
       </Grid>
     </div>
   );

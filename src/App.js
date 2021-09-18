@@ -1,5 +1,5 @@
 import Navbar from "./Components/Navbar";
-import { ThemeProvider, Button } from "@material-ui/core";
+import { ThemeProvider, Button, CssBaseline, Switch, Divider } from "@material-ui/core";
 import { createTheme } from "@material-ui/core/styles";
 import { makeStyles } from "@material-ui/core/styles";
 import About from "./Components/About";
@@ -9,10 +9,11 @@ import Projects from "./Components/Projects";
 import Footer from "./Components/Footer";
 import AboutMe from "./Components/AboutMe";
 import ContactForm from "./Components/Contact";
+import { useState } from "react";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    backgroundColor: "#F5F7F8",
+    backgroundColor: "rgba(0, 0, 0, 0.87)",
   },
   container: {
     width: "80%",
@@ -22,33 +23,37 @@ const useStyles = makeStyles((theme) => ({
     margin: "0 auto",
   },
 }));
-const theme = createTheme({
-  shadows: ["none"],
-  palette: {
-    primary: {
-      main: "#5860A6",
-    },
-    secondary: {
-      main: "#ffffff",
-    },
-  },
-});
+
 
 function App() {
+ 
+  const [darkMode, setDarkMode] = useState(true);
+  const theme = createTheme({
+    shadows: ["none"],
+    palette: {
+      type: darkMode ? "dark" : "light",
+    },
+  });
   const classes = useStyles();
   return (
-    <div className={classes.root}>
+    <div
+      style={{ backgroundColor: darkMode ? "rgba(0, 0, 0, 0.87)" : "#F5F7F8" }}
+    >
       <div className={classes.container}>
         <ThemeProvider theme={theme}>
-          <Navbar />
+          <CssBaseline />
+
+          <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
           <About />
 
           <Experience />
           <AboutMe />
-          <Projects />
+          {/* <Projects /> */}
           <Skills />
 
           <ContactForm />
+
+          <Divider variant="fullWidth" />
           <Footer />
         </ThemeProvider>
       </div>

@@ -6,6 +6,7 @@ import CardHeader from "@material-ui/core/CardHeader";
 
 import CardContent from "@material-ui/core/CardContent";
 
+import ListItem from "@material-ui/core/ListItem";
 import Avatar from "@material-ui/core/Avatar";
 
 import Typography from "@material-ui/core/Typography";
@@ -117,7 +118,7 @@ const useStyles = makeStyles((theme) => ({
   },
   description: {
     marginTop: "10px",
-    color: "#2a2e37",
+    // color: "#2a2e37",
     lineHeight: " 1.6em",
     fontSize: "15px",
     paddingBottom: "5px",
@@ -150,7 +151,7 @@ export default function Cards() {
             title={
               <Typography
                 variant="h5"
-                style={({ fontSize: "22px" }, { color: "#122746" })}
+                style={({ fontSize: "22px" })}
                 component="h2"
               >
                 {subdata.companyName}

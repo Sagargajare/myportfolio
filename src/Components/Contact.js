@@ -14,10 +14,10 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
   },
   card: {
-    padding: "2% 10%",
-    minWidth: "350px",
+    padding: "2% 2%",
+    minWidth: "300px",
     maxWidth: "1000px",
-    // boxShadow: "0 7px 50px -1px rgb(0 76 120 / 11%)",
+    boxShadow: "0 7px 50px -1px rgb(0 76 120 / 11%)",
     marginBottom: "20px",
   },
   form: {
