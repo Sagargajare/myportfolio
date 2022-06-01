@@ -19,7 +19,7 @@ const data = [
     imgSrc: "https://www.pleximus.com/assets/images/logo.png",
     companyName: "Pleximus",
     role: "Python Developer Intern",
-    dates: "May 2021-Present",
+    dates: "May 2021 - Oct 2021",
     resposibilities: [
       "Developed APIs using Flask, Django, and Fastapi.",
       " Worked on developing Web Scrapers",
@@ -65,7 +65,7 @@ const data = [
     imgSrc: diy,
     companyName: "Diyintern",
     role: "Full Stack Developer Intern",
-    dates: "June 2021-Present",
+    dates: "June 2021-Feb 2022",
     resposibilities: [
       "Worked on Developing Diyintern platform from Scratch",
       "Used Reactjs in frontend and flask in backend for developing MVP",

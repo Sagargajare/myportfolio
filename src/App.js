@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
 
 function App() {
  
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
   const theme = createTheme({
     shadows: ["none"],
     palette: {

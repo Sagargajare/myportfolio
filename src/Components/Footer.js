@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: "80px",
     fontFamily: "Inter",
   },
- 
+
   socialMediaHeader: {
     textAlign: "center",
     fontWeight: 600,
@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
     margin: "5px",
     marginBottom: "15px",
     textDecoration: "none",
-  
+
     fontWeight: "600",
     fontSize: "16px",
     letterSpacing: "-.4px",
@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
       fontFamily: "Inter",
       fontWeight: "600",
       fontSize: "16px",
-    
+
       textDecoration: "none",
     },
   },
@@ -70,21 +70,19 @@ export default function Footer() {
           <h2 className={classes.socialMediaHeader}>Social Media</h2>
           <ul className={classes.socialList}>
             <li className={classes.socials}>
+              <a href="https://github.com/sagargajare/">Github</a>
+            </li>
+            <li className={classes.socials}>
               <a href="https://www.linkedin.com/in/sagar-gajare">Linkedin</a>
             </li>
             <li className={classes.socials}>
-              <li className={classes.socials}>
-                <a href="https://www.instagram.com/i_am_swagar_g/">Instagram</a>
-              </li>
+              <a href="https://www.instagram.com/i_am_swagar_g/">Instagram</a>
             </li>
             <li className={classes.socials}>
-              <li className={classes.socials}>
-                <a href="https://twitter.com/SagarGajare20">Twitter</a>
-              </li>
+              <a href="https://twitter.com/SagarGajare20">Twitter</a>
             </li>
           </ul>
         </Grid>
-       
       </Grid>
     </div>
   );

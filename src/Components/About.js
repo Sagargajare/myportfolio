@@ -58,11 +58,11 @@ export default function About() {
       <h2>
         Hi, I am <span className={classes.purple}>Sagar Gajare </span>👋
       </h2>
-      <h2 className={classes.mytitle}>React-Django Full Stack Developer</h2>
+      <h2 className={classes.mytitle}>Full Stack and Blockchain Developer</h2>
       <p className={classes.bio}>
-        I am a Full-Stack Developer & Freelancer from Pune, India. I like to
-        work on exciting projects on both the Frontend and the Backend. I also
-        do freelancing ⚡️. Connect with me on
+        I am a Full-Stack and Blockchain Developer, Freelancer from Pune, India.
+        I like to work on exciting projects on both the Frontend and the
+        Backend. I also do freelancing ⚡️. Connect with me on
         <span>
           <a
             className={classes.linkedin}
@@ -80,6 +80,7 @@ export default function About() {
       <b />
       <div className={classes.ctcButtons}>
         <Button
+          target={"_blank"}
           href="https://drive.google.com/file/d/1QbOrh6FwyvRCEho5HptRzz7VOkkSPPnd/view?ths=true"
           variant="contained"
           color="primary"
@@ -98,6 +99,14 @@ export default function About() {
           >
             Contact Me
           </Link>
+        </Button>
+        <Button
+          target={"_blank"}
+          href="https://calendly.com/sggajare360/"
+          variant="outlined"
+          color="primary"
+        >
+          Schedule a Meet
         </Button>
       </div>
     </div>
